@@ -44,8 +44,8 @@ def main():
         file_obj = open(filename, 'r')
         text_obj = file_obj.read()
         file_obj.close()
-        enc_payload = text_obj.encode('utf-8')
-        s.sendall('GET {} HTTP/1.0\r\n\r\n'.format(enc_payload))
+        enc_payload = f'Get {text_obj} HTTP/1.0\r\n\r\n'.encode('utf-8')
+        s.sendall(enc_payload)
     except socket.error as e:
         print(f'Error sending data: {e}')
         sys.exit(1)
