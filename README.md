@@ -4,3 +4,4 @@ Repository for miscellaneous python 3 networking scripts.
 ## Required Modules
 - construct
 - scapy
+- ntplib
