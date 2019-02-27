@@ -5,10 +5,11 @@ import socket
 
 
 def print_machine_info():
+    # Name of the machine this script is running on
     host_name = socket.gethostname()
+    # IP address of the machine this script is running on
     ip_address = socket.gethostbyname(host_name)
-    print(f'Host name:  {host_name}')
-    print(f'IP address:  {ip_address}')
+    print(f'Host name:  {host_name}\nIP address:  {ip_address}')
 
 
 if __name__ == '__main__':
